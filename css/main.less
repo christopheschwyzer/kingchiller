@@ -1,49 +1,47 @@
 @import (less) "../bower_components/.dist/bower.css";
 
-@colorBg: white;
-@colorFg: #4D4D4D;
+@colorBg: black;
+@colorFg: #5c5c5c;
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
 html {
+  height: 100%;
   font-family: Helvetica, Arial, sans-serif;
   color: @colorFg;
   font-weight: 300;
 }
 
 body {
+  height: 100%;
   background-color: @colorBg;
+  overflow: hidden;
 }
 
-#splash {
-  min-height: 100vh;
-  text-align: center;
-  padding-top: 30vh;
+a {
+  color: @colorFg;
+  text-decoration: none;
+}
 
-  @media screen and (max-height: 500px){
-    padding-top: 20vh;
+#video {
+  height: 100%;
+  position: relative;
+
+  video {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-53%, -50%);
   }
 
-  @media screen and (max-height: 350px){
-    padding-top: 15vh;
-  }
-
-  .logo {
-    display: block;
-    margin: 0 auto;
-    text-transform: uppercase;
-    height: 30vmin;
-  }
-
-  .info {
-    margin-top: 10vh;
-    font-size: 0.9em;
-    line-height: 1.8em;
-
-    @media screen and (max-height: 350px){
-      margin-top: 0;
-    }
+  .twitter-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2vh;
   }
 }
+
+

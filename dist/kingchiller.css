@@ -359,42 +359,36 @@ th {
   box-sizing: border-box;
 }
 html {
+  height: 100%;
   font-family: Helvetica, Arial, sans-serif;
-  color: #4d4d4d;
+  color: #5c5c5c;
   font-weight: 300;
 }
 body {
-  background-color: white;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
 }
-#splash {
-  min-height: 100vh;
-  text-align: center;
-  padding-top: 30vh;
+a {
+  color: #5c5c5c;
+  text-decoration: none;
 }
-@media screen and (max-height: 500px) {
-  #splash {
-    padding-top: 20vh;
-  }
+#video {
+  height: 100%;
+  position: relative;
 }
-@media screen and (max-height: 350px) {
-  #splash {
-    padding-top: 15vh;
-  }
+#video video {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-53%, -50%);
+          transform: translate(-53%, -50%);
 }
-#splash .logo {
-  display: block;
-  margin: 0 auto;
-  text-transform: uppercase;
-  height: 30vmin;
-}
-#splash .info {
-  margin-top: 10vh;
-  font-size: 0.9em;
-  line-height: 1.8em;
-}
-@media screen and (max-height: 350px) {
-  #splash .info {
-    margin-top: 0;
-  }
+#video .twitter-link {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 2vh;
 }
 /*# sourceMappingURL=kingchiller.css.map */
